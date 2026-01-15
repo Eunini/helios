@@ -43,9 +43,18 @@ class Settings(BaseSettings):
     ENABLE_VECTOR_STORE: bool = True
     MAX_TASK_QUEUE_SIZE: int = 100
 
+    # Voice & Video Configuration
+    OPENAI_API_KEY: Optional[str] = None
+    VIDEO_CHAT_ENABLED: bool = True
+    VOICE_VIDEO_LOG_LEVEL: str = "INFO"
+    ENABLE_VOICE_VIDEO_DEBUG: bool = False
+    VOICE_RATE_LIMIT_PER_MINUTE: int = 60
+    VOICE_RATE_LIMIT_PER_HOUR: int = 1000
+
     class Config:
         env_file = ".env"
         case_sensitive = True
+        extra = "ignore"  # Allow extra environment variables
 
 
 @lru_cache()

@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 import logging
 
 from core import get_settings, init_db, get_db, logger
+from core.database import SessionLocal
 from orchestrator import TaskManager
 from memory import get_vector_store
 
