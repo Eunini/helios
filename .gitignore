@@ -109,6 +109,9 @@ dist/
 Thumbs.db
 .env.production.local
 .env.production
+.env.example
+backend/.env.example
+frontend/.env.example
 
 # Temporary files
 *.tmp
